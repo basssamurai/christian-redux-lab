@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Todo = ({ onClick, completed, text }) => (
+const Todo = ({ onClick, completed, text, ...props }) => (
   <li
     onClick={onClick}
     style={{
@@ -9,6 +9,8 @@ const Todo = ({ onClick, completed, text }) => (
     }}
   >
     {text}
+
+    <button onClick={props.onRemove}>X</button>
   </li>
 )
 
